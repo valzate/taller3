@@ -57,6 +57,7 @@ cola1.enqueue(20);
 cola1.enqueue(30);
 console.log("Cola después de agregar elementos:");
 cola1.print();
+console.log("Elemento al frente de la cola:", cola1.peek());
 cola1.dequeue();
 console.log("Cola después de eliminar un elemento:");
 cola1.print();
