@@ -51,3 +51,7 @@ class cola{
         console.log(resultado);
     }
 }
+const cola1 = new cola();
+cola1.enqueue(10);
+cola1.enqueue(20);
+cola1.enqueue(30);
