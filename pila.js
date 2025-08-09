@@ -1,6 +1,7 @@
 class nodo{
     constructor(dato) {
         this.dato = dato;
+        this.anterior = null;
         this.siguiente = null;
     }
 }
@@ -29,14 +30,14 @@ class pila{
             return dato;
         }
     }
-    peek() {
+    peek() {//Funcion que retorna el elemento en la cima de la pila sin eliminarlo
         if (this.cima == null) {
             return null;
         } else {
             return this.cima.dato;
         }
     }
-    print() {
+    print() {//Funcion que imprime los elementos de la pila
         let aux = this.cima;
         let resultado = "";
         while (aux != null) {
@@ -46,7 +47,13 @@ class pila{
         console.log(resultado);
     }
 }
-const stack = new pila();
-stack.push(10);
-stack.push(20);
-stack.push(30);
+const pila1 = new pila();
+pila1.push(10);
+pila1.push(20);
+pila1.push(30);
+console.log("Pila después de agregar elementos:");
+pila1.print();
+pila1.pop();
+console.log("Pila después de eliminar un elemento:");
+pila1.print();
+console.log("Elemento en la cima de la pila:", pila1.peek());
